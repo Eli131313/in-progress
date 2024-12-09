@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eli Esplin's Website</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            margin: 20px auto;
+            max-width: 1000px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .active-tab {
+            display: block;
+        }
+
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Eli Esplin</h1>
+        <p>626 North 1170 East, Orem, UT 84097 | Phone: 801-500-3749 | Email: eliesplin13@gmail.com</p>
+    </header>
+
+    <nav>
+        <a onclick="showTab('home')">Home</a>
+        <a onclick="showTab('resume')">Resume</a>
+        <a onclick="showTab('aboutme')">About Me</a>
+    </nav>
+
+    <main>
+        <!-- Home Tab Content -->
+        <div id="home" class="tab-content active-tab">
+            <h2>Home Page</h2>
+            <p>Welcome to my website!</p>
+        </div>
+
+        <!-- Resume Tab Content -->
+        <div id="resume" class="tab-content">
+            <h2>Eli Esplin's Resume</h2>
+            <nav>
+                <a href="#volunteer">Volunteer Experience</a>
+                <a href="#work">Work Experience</a>
+                <a href="#education">Education</a>
+                <a href="#sports">Sports</a>
+                <a href="#skills">Key Skills</a>
+            </nav>
+
+            <main>
+                <!-- Left Section with Image -->
+                <div class="left-content">
+                    <img src="work-pic.jpg" />
+                </div>
+
+                <!-- Center Section with Resume Content -->
+                <div class="center-content">
+                    <section id="volunteer">
+                        <h2>Volunteer Experience</h2>
+                        <ul>
+                            <li><strong>Church of Jesus Christ of Latter-day Saints</strong> - Summer 2021 - Summer 2023</li>
+                            <p>• Served as a missionary in Honduras</p>
+                        </ul>
+                    </section>
+
+                    <section id="work">
+                        <h2>Work Experience</h2>
+                        <ul>
+                            <li><strong>Brigham Young University Intramural Sports</strong> - Fall 2023 - Spring 2024</li>
+                            <p>• Officiated Flag Football and Soccer games as a referee</p>
+                            <li><strong>Intermountain Pool Covers</strong> - Summer 2021</li>
+                            <p>• Worked full-time installing and fixing pool covers</p>
+                            <li><strong>Dusty Rhodes – Handyman</strong> - Summer 2020</li>
+                            <p>• Managed painting and staining projects, pool maintenance, and yard work</p>
+                        </ul>
+                    </section>
+
+                    <section id="education">
+                        <h2>Education</h2>
+                        <ul>
+                            <li><strong>Brigham Young University</strong> - Currently attending</li>
+                            <li><strong>Orem High School</strong> - Graduated in 2021 with a 4.00 GPA</li>
+                            <ul>
+                                <li>Advanced classes: Honors Math, AP Environmental Science, AP Calculus</li>
+                                <li>Member of National Honors Society, Math Club, Chess Club, Ping-Pong Club</li>
+                            </ul>
+                        </ul>
+                    </section>
+
+                    <section id="sports">
+                        <h2>Sports</h2>
+                        <ul>
+                            <li><strong>Orem High Sports Teams</strong></li>
+                            <p>• Kicker and wide receiver for the football team</p>
+                            <p>• Goalkeeper for the varsity soccer team</p>
+                        </ul>
+                    </section>
+
+                    <section id="skills">
+                        <h2>Key Skill</h2>
+                        <p>• Fluent in Spanish</p>
+                    </section>
+                </div>
+            </main>
+        </div>
+
+        <!-- About Me Tab Content -->
+        <div id="aboutme" class="tab-content">
+            <h2>About Me</h2>
+            <p>Details to be added later.</p>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2024 Eli Esplin. All Rights Reserved.
+    </footer>
+
+    <script>
+        function showTab(tabName) {
+            // Hide all tabs
+            var tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(function(tab) {
+                tab.classList.remove('active-tab');
+            });
+
+            // Show the selected tab
+            document.getElementById(tabName).classList.add('active-tab');
+        }
+    </script>
+</body>
+</html>
